@@ -22,23 +22,31 @@ main {
 .navbar {
   position: fixed;
   background-color: var(--rosamédio);
+  top: 0;
+  width: 6rem;
+  height: 100vh;
+  z-index: 10;
 }
 
 .navbar-nav {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+a {
+  cursor: pointer;
 }
 
 .logo {
-  margin-top: 1.55rem;
-  margin-bottom: 8rem;
-  width: 5rem;
-  height: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 10rem;
+  width: 4rem;
+  height: 4rem;
   background-repeat: no-repeat;
   background-image: url(./img/cherries.png);
   background-size: contain;
@@ -56,12 +64,12 @@ main {
 .nav-link {
   display: flex;
   align-items: center;
-  height: 5rem;
+  height: 7rem;
   text-decoration: none;
 }
 
 .first {
-  background-color: white;
+  background-color: var(--rosaforte);
 }
 
 .nav-link svg {
@@ -70,50 +78,56 @@ main {
 }
 
 svg {
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   border-radius: 100%;
   padding: .45rem;
   fill: var(--rosaforte);
 }
 
 .first {
-  background-color: var(--rosaforte);
+  background-color: #FFF; 
 }
 
+.first :nth-child(1) {
+  background-color: #FF7FA6;
+  fill: #FFF;
+}
+
+
 .banner {
-    position: relative;
-    background-color: #FFACC5;
-    width: 38rem;
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    padding-left: 2rem;
-    z-index: 1;
-    margin-top: 2rem;
-    color: #FFF;
+  position: relative;
+  background-color: #FFACC5;
+  width: 38rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  z-index: 1;
+  margin-top: 2rem;
+  color: #FFF;
 }
 
 h1 {
   font: normal 2.3rem 'Jua';
 }
+
 .sec {
-  flex-direction: column;
   margin-top: 5rem;
   margin-left: 5rem;
-  gap: 20px;
-  max-width: 50rem;
 }
 
 .list {
-  position: relative;
   background: #FFF;
   width: 396px;
-  height: 716px;
   border-radius: 1rem;
   box-shadow: 0px 6px 24px rgba(255, 172, 197, 0.5);
+  padding-bottom: .3em;
 }
 
-/* --tasks-- */
+.task-list{
+  height: 20%;
+}
+
 
 #new-task-form {
   display: flex;
@@ -173,8 +187,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 364px;
-  height: 120px;
+  height: 5em;
 }
 
 #new-task-input {
@@ -226,6 +239,7 @@ input {
 
 #tasks {
   padding: .5rem;
+
 }
 
 #tasks .task {
@@ -257,8 +271,7 @@ input {
 }
 
 .border {  
-  border-color: var(--rosaforte);
-  height: 624px;
+  border-color: var(--rosaforte);  
   width: 364px;
   border: 2px solid var(--rosaforte);
   margin: .8rem;
@@ -267,66 +280,10 @@ input {
 }
 
 .pos {
-  display: flex;
   border-color: transparent;
-  border-top: var(--rosamédio);
+  border-bottom: var(--rosamédio);
   border-style: dashed;
-  position: absolute;
-  bottom: 0;
-  width: 340px;
   align-items: center;
   justify-content: center;
-  margin-left: 8px;
+  margin-bottom: 1em; 
 }
-
-
-/* ----------------media-------------- */
-/* 
-@media only screen and (max-width: 600px) {
-    .navbar {
-      bottom: 0;
-      width: 100vw;
-      height: 5rem;
-    }
-  
-    .logo {
-      display: none;
-    }
-  
-    .navbar-nav {
-      flex-direction: row;
-    }
-  
-    .nav-link {
-      justify-content: center;
-    }
-  
-    main {
-      margin: 0;
-    }
-}
-  */
-
-  @media only screen and (min-width: 600px) {
-    .navbar {
-      top: 0;
-      width: 5rem;
-      height: 100vh;
-    }
-  
-    /* .navbar:hover {
-      width: 16rem;
-    } 
-  
-    .navbar:hover .link-text {
-      display: inline;
-    }
-  
-    .navbar:hover .logo svg {
-      margin-left: 3rem;
-    }
-  
-    .navbar:hover .logo-text {
-      left: 0px;
-    } */
-} 
